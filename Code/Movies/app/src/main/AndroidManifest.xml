@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.edureka.movies" >
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/applogo"
+        android:label="@string/app_name"
+        android:name=".application.ApplicationController"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.edureka.movies.SplashScreen"
+            android:label="@string/app_name"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".trendingmovies.MoviesList"
+            android:label="@string/title_activity_login"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name=".trendingmovies.MoviesTutorials"
+            android:label="@string/title_activity_register"
+            android:noHistory="true" >
+        </activity>
+        <activity
+            android:name=".trendingmovies.MovieHomePageDisplay"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_item_display" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Trending Movies</string>
+    <string name="action_settings">Trending Movies</string>
+    <string name="title_activity_login">Movies List</string>
+    <string name="title_activity_register">Movie Tutorials</string>
+    <string name="str_app_banner">Trending Movies</string>
+    <string name="title_activity_item_display">Movie Home Page</string>
+
+</resources>

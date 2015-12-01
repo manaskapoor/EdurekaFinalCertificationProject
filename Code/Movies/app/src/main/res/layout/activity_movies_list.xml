@@ -1,0 +1,102 @@
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+      <RelativeLayout
+          android:background="@color/white"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+          <ImageView
+              android:id="@+id/homepagelgo"
+              android:src="@drawable/applogo"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_above="@+id/anchor"
+              android:layout_toLeftOf="@+id/title"
+              android:layout_toStartOf="@+id/title" />
+          <TextView
+              android:text="Trending Movies"
+              android:layout_width="wrap_content"
+              android:id="@+id/title"
+              android:layout_centerHorizontal="true"
+              android:gravity="center"
+              android:textSize="25dp"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="15dp"/>
+          <View
+              android:id="@+id/horizontalLine1"
+              android:background="@color/theme_green"
+              android:layout_marginTop="7dp"
+              android:layout_below="@+id/title"
+              android:layout_width="match_parent"
+              android:layout_height="3dp"></View>
+        <ListView
+            android:id="@+id/searchResultList"
+            android:layout_below="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_marginTop="7dp"
+            android:divider="@color/theme_green"
+            android:dividerHeight="3dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+          <View
+              android:id="@+id/anchor"
+              android:layout_width="5dp"
+              android:layout_height="50dp"
+              android:background="@color/theme_green"
+              android:layout_centerHorizontal="true"
+              android:layout_alignBottom="@+id/search"
+              android:layout_alignTop="@+id/horizontalLine1" />
+
+          <EditText
+              android:id="@+id/search"
+              android:layout_marginTop="5dp"
+              android:layout_below="@+id/horizontalLine1"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_toLeftOf="@id/anchor"
+              android:maxLines="1"
+              android:imeOptions="actionSearch"
+              android:inputType="text"
+              android:singleLine="true"
+              android:hint="Search"
+               />
+          <Spinner
+              android:id="@+id/sort"
+              android:layout_below="@+id/horizontalLine1"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_toRightOf="@id/anchor"
+              android:layout_marginTop="5dip"
+              android:text="Sort"
+              android:layout_above="@+id/searchResultList" />
+
+          <ImageView
+              android:layout_width="match_parent"
+              android:layout_marginTop="7dp"
+              android:src="@drawable/oopsmessage"
+              android:layout_below="@+id/search"
+              android:visibility="gone"
+              android:id="@android:id/empty"
+              android:layout_weight="1"
+              android:layout_height="wrap_content" />
+
+          <ImageButton
+              android:layout_width="wrap_content"
+              android:layout_marginTop="7dp"
+              android:src="@drawable/nointernet"
+              android:layout_below="@+id/search"
+              android:visibility="gone"
+              android:layout_centerHorizontal="true"
+              android:id="@+id/retry"
+              android:background="@color/white"
+              android:scaleType="centerInside"
+              android:layout_height="wrap_content" />
+
+      </RelativeLayout>
+
+</LinearLayout>

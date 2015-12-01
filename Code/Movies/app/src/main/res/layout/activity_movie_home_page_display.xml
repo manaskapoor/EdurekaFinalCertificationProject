@@ -1,0 +1,187 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_height="150dp"
+            android:layout_width="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:layout_centerInParent="true"
+                android:id="@+id/movieImageMain"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:background="@color/theme_green"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:id="@+id/movieTitleMain"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/shareButton"
+                android:layout_toLeftOf="@+id/shareButton" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/shareButton"
+                android:layout_centerInParent="true"
+                android:src="@drawable/abc_ic_menu_share_mtrl_alpha"
+                android:background="@color/theme_green"
+                android:layout_alignParentRight="true"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:layout_width="match_parent">
+
+         <TextView
+                android:id="@+id/movieCertificationMain"
+                android:text="PG"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Rating"
+                android:id="@+id/movieRatingMain"
+                android:gravity="center"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Length"
+                android:id="@+id/movieLengthMain"
+                android:gravity="center"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+
+            <TextView
+                android:id="@+id/movieReleaseDate"
+                android:text="Release Date"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_below="@+id/movieCertificationMain"
+                android:textStyle="bold"
+                android:textSize="17dp"
+                />
+
+            <TextView
+                android:id="@+id/movieReleaseDateMain"
+                android:text="25 January, 2015"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_below="@+id/movieReleaseDate"
+                android:textSize="17dp"
+                />
+
+            <TextView
+                android:id="@+id/movieGeneres"
+                android:text="Genre"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_below="@+id/movieReleaseDateMain"
+                android:textStyle="bold"
+                android:textSize="17dp"
+                />
+
+            <TextView
+                android:id="@+id/movieGeneresMain"
+                android:text="25 January, 2015"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_below="@+id/movieGeneres"
+                android:textSize="17dp"
+                />
+
+            </RelativeLayout>
+        <RelativeLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+        <LinearLayout
+            android:id="@+id/LinearLayout02"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_alignParentBottom="true">
+            <Button
+                android:id="@+id/movieTrailer"
+                android:layout_width="wrap_content"
+                android:background="@drawable/button"
+                android:layout_height="wrap_content"
+                android:stateListAnimator="@null"
+                android:layout_weight="1" android:text="Play Trailer">
+            </Button>
+            <Button
+                android:id="@+id/movieHomePage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:stateListAnimator="@null"
+                android:background="@drawable/button"
+                android:text="Visit Homepage">
+            </Button>
+        </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_height="match_parent"
+
+            android:layout_width="match_parent">
+
+        <com.edureka.movies.adapters.OverviewText
+            android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:textSize="15dp"
+                android:padding="10dp"
+                android:id="@+id/movieOverview"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+
+</LinearLayout>
+</ScrollView>
+</FrameLayout>
